@@ -105,7 +105,7 @@ RUN mkdir proj \
     && for i in /build${PROJ_INSTALL_PREFIX}/bin/*; do strip -s $i 2>/dev/null || /bin/true; done
 
 # Build GDAL
-ARG GDAL_VERSION=master
+ARG GDAL_VERSION
 ARG GDAL_RELEASE_DATE
 ARG GDAL_BUILD_IS_RELEASE
 RUN if test "${GDAL_VERSION}" = "master"; then \
